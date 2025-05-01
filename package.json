@@ -24,22 +24,11 @@
     "more content"
   ],
   "exports": {
-    "./": "./src/index.js"
-  },
-  "main": "dist/index.js",
-  "unpkg": "dist/index.umd.js",
-  "files": [
-    "dist"
-  ],
-  "targets": {
-    "main": false,
-    "module": false,
-    "browser": false
+    ".": "./src/index.js"
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "microbundle",
-    "dev": "npm run demo:start && microbundle watch",
+    "dev": "npm run demo:start",
     "demo:start": "parcel ./docs/src/*.html --dist-dir ./docs/dist",
     "demo:build": "parcel build ./docs/src/index.html --dist-dir ./docs/dist --public-url ./",
     "demo:deploy": "npm run demo:build && gh-pages -d ./docs/dist",
@@ -50,8 +39,6 @@
     "@parcel/transformer-sass": "^2.10.0",
     "eslint": "^8.52.0",
     "gh-pages": "^5.0.0",
-    "microbundle": "^0.15.1",
     "parcel": "^2.10.0"
-  },
-  "type": "module"
+  }
 }
