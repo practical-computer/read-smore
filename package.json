@@ -23,6 +23,9 @@
     "content",
     "more content"
   ],
+  "exports": {
+    "./": "./src/index.js"
+  },
   "main": "dist/index.js",
   "unpkg": "dist/index.umd.js",
   "files": [
